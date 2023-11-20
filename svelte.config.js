@@ -20,4 +20,10 @@ const config = {
 	}
 };
 
+if (process.env.NODE_ENV === 'production') {
+	config.kit.paths = {
+		base: '/threejs-experiments',
+	}
+}
+
 export default config;
