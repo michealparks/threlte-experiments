@@ -19,6 +19,7 @@
 		"@dimforge/rapier3d-compat": "^0.11.2",
 		"@playwright/test": "^1.40.0",
 		"@sveltejs/adapter-auto": "^2.1.1",
+		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.27.6",
 		"@theatre/core": "^0.7.0",
 		"@theatre/studio": "^0.7.0",
