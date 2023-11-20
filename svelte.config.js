@@ -15,10 +15,4 @@ const config = {
 	}
 };
 
-if (process.env.NODE_ENV === 'production') {
-	config.kit.paths = {
-		base: '/threlte-experiments',
-	}
-}
-
 export default config;
