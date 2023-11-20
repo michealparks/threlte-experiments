@@ -15,10 +15,10 @@
   <OrbitControls />
 </T.PerspectiveCamera>
 
-<T.AmbientLight />
+<T.AmbientLight intensity={2} />
 <T.DirectionalLight intensity={2} position={[0, 10, 10]} castShadow />
 
 <Stats />
 
-<!-- <Portal /> -->
-<Inn />
+<Portal />
+<!-- <Inn /> -->
