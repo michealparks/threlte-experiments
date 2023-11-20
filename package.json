@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"build:ci": "vite build --base=/threlte-experiments/",
+		"build:ci": "vite build",
 		"preview": "vite preview",
 		"test": "npm run test:integration && npm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

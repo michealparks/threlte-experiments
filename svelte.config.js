@@ -22,7 +22,7 @@ const config = {
 
 if (process.env.NODE_ENV === 'production') {
 	config.kit.paths = {
-		base: '/threejs-experiments',
+		base: '/threlte-experiments',
 	}
 }
 
