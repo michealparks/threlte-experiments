@@ -1,11 +1,15 @@
 <script lang='ts'>
   import BatchedMesh from './BatchedMesh.svelte'
   import { Mesh, type BatchedMesh as BatchedMeshType } from 'three'
+  import { createRawEventDispatcher } from '@threlte/core';
 
   export let object: THREE.Object3D | THREE.Object3D[]
   export let filter: ((node: THREE.Object3D) => boolean) | undefined = undefined 
   
   export let meshes: BatchedMeshType[] = []
+  export let ids: Map<string, number>
+
+  const dispatch = createRawEventDispatcher()
 
   let materialMap: Map<THREE.Material, THREE.Mesh[]> | undefined
 
@@ -20,13 +24,13 @@
         if (filter?.(node) === false) return
 
         let objects = materialMap!.get(node.material) ?? []
-        console.log(objects)
         objects.push(node)
         
         materialMap!.set(node.material, objects)
       })
     }
     
+    dispatch('create')
   }
 
 

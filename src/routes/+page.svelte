@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<main>
+  <h1>Experiments</h1>
+  <ul>
+    <li><a href='./batched1'>Batched Mesh 1</a></li>
+    <li><a href='./batched2'>Batched Mesh 2</a></li>
+  </ul>
+  
+</main>
+
+<style>
+  main { padding: 1rem }
+</style>
