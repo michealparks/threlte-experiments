@@ -1,14 +1,18 @@
 <script lang='ts'>
   import { T } from '@threlte/core'
-	import { teleportControls } from '@threlte/xr'
 
   export let surface: THREE.Mesh
-
-  teleportControls('left')
-  teleportControls('right')
+  export let blocker: THREE.Mesh
 </script>
 
 <T
   is={surface}
+  teleportSurface
   visible={false} 
+/>
+
+<T
+  is={blocker}
+  teleportBlocker
+  visible={false}
 />

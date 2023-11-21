@@ -74,8 +74,13 @@
     }}
   />
 
-  <Teleport surface={$gltf.nodes.TeleportSurface} />
+  <Teleport
+    surface={$gltf.nodes.TeleportSurface}
+    blocker={$gltf.nodes.TeleportBlocker}
+  />
 {/if}
+
+
 
 <Sky elevation={0} azimuth={-90} />
 
