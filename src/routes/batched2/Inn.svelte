@@ -5,6 +5,7 @@
   import { createNoise2D } from 'simplex-noise'
   import BatchedMesh from '$lib/components/BatchedMesh.svelte'
 	import Wind from './Wind.svelte'
+  import Teleport from './Teleport.svelte'
 
   const gltf = useGltf('./scene_vr.glb')
 
@@ -64,6 +65,7 @@
   <BatchedMesh
     material={$gltf.materials.Composition}
     object={$gltf.scene}
+    filter={(node) => node.name.includes('Teleport') === false}
     bind:ids
     bind:mesh
     on:create={() => {
@@ -71,6 +73,8 @@
       start()
     }}
   />
+
+  <Teleport surface={$gltf.nodes.TeleportSurface} />
 {/if}
 
 <Sky elevation={0} azimuth={-90} />

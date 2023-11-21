@@ -1,9 +1,14 @@
 <script lang='ts'>
   import { T } from '@threlte/core'
-	import { MeshBasicMaterial } from 'three'
+	import { teleportControls } from '@threlte/xr'
+
+  export let surface: THREE.Mesh
+
+  teleportControls('left')
+  teleportControls('right')
 </script>
 
-<T.Mesh>
-  <T.PlaneGeometry  />
-  <T.MeshBasicMaterial />
-</T.Mesh>
+<T
+  is={surface}
+  visible={false} 
+/>
